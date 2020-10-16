@@ -1,0 +1,13 @@
+"use strict";
+exports.__esModule = true;
+var demo1_1 = require("./demo1");
+var mypkg_1 = require("./mypackage/mypkg");
+var outside_1 = require("../Outsidepkg/outside");
+var myobj = new demo1_1.Myclass("Java", "By Kiran", 2);
+myobj.display();
+console.log("Call Add Function " + demo1_1.add(2, 3));
+console.log("Pi value is " + demo1_1.pi);
+var mypkg = new mypkg_1.MyPkage('Developer');
+mypkg.display();
+var oustsideobj = new outside_1.Outside(50000);
+oustsideobj.display();
