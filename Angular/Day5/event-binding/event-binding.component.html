@@ -1,0 +1,20 @@
+<p>event-binding works!</p>
+
+<button (click)="onClick()">Click ME</button> <br><br>
+
+<button (click)="onClick1()">Show me</button><br>
+<h3> {{name}} </h3> 
+
+<button (click)="onSetData()">Set Data</button> <br>
+
+<input type="text" placeholder="Out put Result..." [value]="name2"> <br><br>
+
+<button (click)="res=2+2">Add</button> {{'Addition  '+ res}} <br><br>
+
+<button (click)="res2=num1+num2">Add1</button>{{res2}}
+<hr>
+<!-- $event- It is special variable given by the angular.
+use of $event- it gives current dom element information (it nothing gives the object of that element) -->
+<br>
+<button (click)="onEventData($event,'red')" value="doller Event Occur" >Click Me</button>
+
