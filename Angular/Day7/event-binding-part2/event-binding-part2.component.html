@@ -1,0 +1,28 @@
+<p>event-binding-part2 works!</p>
+
+<!-- template reference variable -->
+<input #myinput type="text" 
+placeholder="Enter the Name..." > <br>
+<input #myinput1 type="text" 
+placeholder="Enter the Name..." > <br>
+<button (click)="onClick(myinput,myinput1)">Click Me</button> <br><br>
+
+<input type="text" placeholder="Output is ....." [value]="name" [hidden]="ishidden"><br>
+<input type="text" placeholder="Output is ....." [value]="name1" [hidden]="ishidden">
+<hr>
+<input #myinput3 type="text" placeholder="Enter the Name..." (change)="onChange(myinput3)" [value]="name2">
+<hr>
+
+<input type="text" placeholder="Enter the Text"
+(keyup)="onKeyUp()"> <br><br>
+
+<input type="text" placeholder="Key Down event"
+(keydown)="onkeyDown()"
+>
+<hr>
+<h2> Two Way Binding </h2>
+<input type="text" [(ngModel)]="product" > <br>
+{{product}}
+
+
+

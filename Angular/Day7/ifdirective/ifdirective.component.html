@@ -1,0 +1,27 @@
+<p>ifdirective works!</p>
+<!-- structural directive -->
+
+<div *ngIf="rating<4"> If condition is true
+</div>
+<h2>If else form how to use </h2>
+
+<div *ngIf="rating1<4; else elsepart">
+    <h4> If else Condition is True</h4>
+</div>
+<ng-template #elsepart>
+  <h3>Else part condition is false </h3>  
+</ng-template>
+<hr>
+
+<div *ngIf="rating3<4; then mainpart else elsepart1">
+</div>
+<ng-template #mainpart>
+    <input type="text" placeholder="Enter the text..">
+</ng-template>
+<ng-template #elsepart1>
+    <h1>YOU ARE IN ELSE PART</h1>
+</ng-template>
+<!-- <div #elsepart1>
+    <h1>YOU ARE IN ELSE PART</h1>
+</div> -->
+
