@@ -1,0 +1,40 @@
+<p>my-post works!</p>
+<h2>Add Post</h2>
+<label for="">Title</label>&nbsp;
+<input #titleinput type="text" placeholder="Enter the Title" ><br><br>
+<label for="">Body</label>&nbsp;
+<input #bodyinput type="text" placeholder="Enter the Body" ><br><br>
+<button (click)="onSubmit(titleinput,bodyinput)">Submit</button>
+
+<hr>
+<div [hidden]="ishidden">
+    <h2>Update Data</h2>
+    <label for="">ID</label>&nbsp;
+    <input type="text" placeholder="Enter id" [(ngModel)]="ID" readonly><br><br>
+    <label for="">Title</label>&nbsp;
+    <input type="text" placeholder="Enter Title" [(ngModel)]="TITLE" ><br><br>
+    <label for="">Body</label>&nbsp;
+    <input type="text" placeholder="Enter Body" [(ngModel)]="BODY"><br><br>
+    <button (click)="OnFinalUpdate()">UPDATE</button>   
+
+</div>
+<hr>
+<table border="1px">
+    <thead>
+        <th>ID</th>
+        <th>Action</th>
+        <th>Title</th>
+        <th>Body</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of post">
+            <td> {{item.id}} </td>
+            <td><button (click)="onUpdate(item)" >Update</button>
+            <button (click)="onDelete(item.id)">Delete</button>
+            </td>
+            <td> {{item.title}} </td>
+            <td> {{item.body}} </td>
+
+        </tr>
+    </tbody>
+</table>
